@@ -1,0 +1,14 @@
+zuul:
+  routes:
+    forms:
+      path: /api/form-schemas/**
+      url: http://localhost:7005
+      stripPrefix: false
+    services:
+      path: /api/**
+      url: http://localhost:7007
+      stripPrefix: false
+server.port: 7001
+logging:
+  level:
+    ROOT: INFO
